@@ -6,7 +6,9 @@
   "scripts": {
     "pre-commit": "npm run lint",
     "build": "webpack --config webpack/webpack.base.config.js",
-    "lint": "eslint ./src",
+    "lint": "npm run jslint && npm run stylelint",
+    "jslint": "eslint ./src",
+    "stylelint": "stylelint ./src",
     "prod:build": "webpack --config webpack/webpack.base.config.js NODE_ENV=production"
   },
   "repository": {
@@ -38,6 +40,8 @@
   },
   "dependencies": {
     "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "react-dom": "^16.4.2",
+    "stylelint": "^9.5.0",
+    "stylelint-scss": "^3.3.0"
   }
 }
