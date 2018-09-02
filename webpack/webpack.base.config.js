@@ -1,15 +1,15 @@
 const
     path = require('path'),
 
-    CleanPlugin = require("clean-webpack-plugin"),
-    MiniCssExtractPlugin = require("mini-css-extract-plugin"),
-    HTMLWebpackPlugin    = require("html-webpack-plugin"),
+    CleanPlugin = require('clean-webpack-plugin'),
+    MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+    HTMLWebpackPlugin    = require('html-webpack-plugin'),
 
     ROOT_DIR = path.join(__dirname, '..');
 
 module.exports  = {
   output: {
-    filename: "[name]-[contenthash].js"
+    filename: '[name]-[contenthash].js'
   },
   module: {
     rules: [
@@ -17,7 +17,7 @@ module.exports  = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader'
         }
       },
       {
@@ -26,7 +26,7 @@ module.exports  = {
         use: [
           MiniCssExtractPlugin.loader,
           { loader: 'css-loader', options: { importLoaders: 2 } },
-          "sass-loader",
+          'sass-loader',
           {
             loader: 'sass-resources-loader',
             options: {
@@ -43,7 +43,7 @@ module.exports  = {
     }),
 
     new MiniCssExtractPlugin({
-      filename: "[name]-[contenthash].css"
+      filename: '[name]-[contenthash].css'
     }),
 
     new HTMLWebpackPlugin({
