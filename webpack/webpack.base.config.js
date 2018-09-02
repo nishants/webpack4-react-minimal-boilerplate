@@ -1,12 +1,13 @@
 const
+    path = require('path'),
+
+    CleanPlugin = require("clean-webpack-plugin"),
     MiniCssExtractPlugin = require("mini-css-extract-plugin"),
     HTMLWebpackPlugin    = require("html-webpack-plugin"),
 
-    isDevEnv    = process.env.NODE_ENV === "development",
-    webpackMode = isDevEnv ? "development" : "production";
+    ROOT_DIR = path.join(__dirname, '..');
 
 module.exports  = {
-  mode: webpackMode,
   output: {
     filename: "[name]-[contenthash].js"
   },
@@ -37,6 +38,10 @@ module.exports  = {
     ]
   },
   plugins: [
+    new CleanPlugin(['dist'], {
+      root: ROOT_DIR
+    }),
+
     new MiniCssExtractPlugin({
       filename: "[name]-[contenthash].css"
     }),
@@ -47,5 +52,4 @@ module.exports  = {
       template: './src/index.html'
     }),
   ]
-
 }
