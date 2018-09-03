@@ -1,8 +1,8 @@
 Todo
-- upload to s3
-- use lint-staged : https://github.com/okonet/lint-staged
 - react css modules
 - setup fontawesome
+- use lint-staged : https://github.com/okonet/lint-staged
 - add enzyme/jest tests
 - progressive web app
-- env config
+
+CDN url : dl9fkxjjoc6gp.cloudfront.net
