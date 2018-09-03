@@ -7,6 +7,7 @@ const
   UglifyJSPlugin    = require('uglifyjs-webpack-plugin'),
   CompressionPlugin = require('compression-webpack-plugin'),
   S3Plugin          = require('webpack-s3-plugin'),
+  { GenerateSW }    = require('workbox-webpack-plugin'),
 
   baseConfig = require('./webpack.base.config'),
   deployConfig = {
@@ -45,6 +46,7 @@ const
 module.exports = merge(baseConfig, {
   mode: 'production',
   plugins: [
+    new GenerateSW({clientsClaim: true, skipWaiting:  true}),
     new UglifyJSPlugin(),
     new CompressionPlugin(),
     new S3Plugin(deployConfig)

@@ -1,5 +1,4 @@
 Todo
-- react css modules
 - setup fontawesome
 - use lint-staged : https://github.com/okonet/lint-staged
 - add enzyme/jest tests
