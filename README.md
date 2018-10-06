@@ -12,5 +12,6 @@ Todo
 - add fonts
 - add post css loader
 - add react eslint to eslint config
+- add redux saga
 
 CDN url : dl9fkxjjoc6gp.cloudfront.net
