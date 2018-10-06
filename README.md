@@ -10,5 +10,7 @@ Todo
 - add not found page
 - add error page
 - add fonts
+- add post css loader
+- add react eslint to eslint config
 
 CDN url : dl9fkxjjoc6gp.cloudfront.net
