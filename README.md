@@ -13,5 +13,8 @@ Todo
 - add post css loader
 - add react eslint to eslint config
 - add redux saga
-
+- env condfig for client side code
+- server side rendering
+- chunking with server side rendereing
+- fix hot reload for components.
 CDN url : dl9fkxjjoc6gp.cloudfront.net
